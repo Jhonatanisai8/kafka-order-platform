@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      # Clave: String (identificador para la partición)
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Valor: Objeto JSON convertido a bytes
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
