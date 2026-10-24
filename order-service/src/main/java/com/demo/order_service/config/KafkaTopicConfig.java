@@ -7,7 +7,7 @@ import org.springframework.kafka.config.TopicBuilder;
 
 @Configuration
 public class KafkaTopicConfig {
-    private static final String ORDER_TOPIC = "order-events";
+    public static final String ORDER_TOPIC = "order-events";
 
     @Bean
     public NewTopic orderTopic() {
